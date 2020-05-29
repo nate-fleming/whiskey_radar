@@ -33,7 +33,10 @@ const Menu: React.FC<IProps> = ({ isOpen }) => {
           <NavLink to="/">Home</NavLink>
         </LinkWarpper>
         <LinkWarpper variants={linkVariants}>
-          <NavLink to="/add-cocktail">Add a Cocktail</NavLink>
+          <NavLink to="/add-cocktail">My Saved Bottles</NavLink>
+        </LinkWarpper>
+        <LinkWarpper variants={linkVariants}>
+          <NavLink to="/radar">Radar</NavLink>
         </LinkWarpper>
       </Card>
     </Wrapper>
@@ -49,14 +52,17 @@ const Wrapper = styled(motion.div)`
   background: ${(props) => props.theme.colors.primary};
   display: flex;
   flex-direction: column;
+  border-bottom-right-radius: 8px;
 `;
 
-const LinkWarpper = styled(motion.div)``;
+const LinkWarpper = styled(motion.div)`
+  margin-bottom: 12px;
+`;
 
 const NavLink = styled(Link)`
   color: white;
   text-decoration: none;
-  margin-bottom: 4px;
+  font-size: 24px;
 `;
 
 const Card = styled.div`

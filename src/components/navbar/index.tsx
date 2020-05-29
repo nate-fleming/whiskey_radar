@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
           className="fas fa-bars fa-2x"
           onClick={() => setMenuIsOpen(!menuIsOpen)}
         />
-        <Title>Barkeep</Title>
+        <Title>Whiskey Radar</Title>
       </Wrapper>
       <Menu isOpen={menuIsOpen} />
     </Theme>

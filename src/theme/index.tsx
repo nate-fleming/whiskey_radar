@@ -18,8 +18,8 @@ const mainTheme = {
   colors: {
     text: "#333",
     background: "#fff",
-    primary: "#2a7dc3",
-    secondary: "#1e669f",
+    primary: "#223442",
+    secondary: "#75848F",
   },
 };
 

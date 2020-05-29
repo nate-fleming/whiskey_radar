@@ -1,8 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import { compareAsc } from 'date-fns';
+import { posts } from '../../api/mocks/posts'
+
+
+import Post from '../../components/post'
 
 const Home: React.FC = () => {
-  return <Title>Barkeep</Title>;
+  const sortedPosts = posts.sort((a,b) => Date.parse(b.date) - Date.parse(a.date))
+  return <Feed>
+    {sortedPosts.map(post => <Post key={post.id} post={post}/>)}
+  </Feed>;
 };
 
 export default Home;
@@ -10,3 +18,11 @@ export default Home;
 const Title = styled.div`
   color: ${(props) => props.theme.colors.primary};
 `;
+
+const Feed = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+`;
+

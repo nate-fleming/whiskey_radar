@@ -6,7 +6,7 @@ import Menu from "./menu";
 const Navbar: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   return (
-    <Theme>
+    <>
       <Wrapper>
         <Hamburger
           className="fas fa-bars fa-2x"
@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
         <Title>Whiskey Radar</Title>
       </Wrapper>
       <Menu isOpen={menuIsOpen} />
-    </Theme>
+    </>
   );
 };
 
@@ -27,6 +27,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   border: none;
+  z-index: 1000;
 `;
 
 const Title = styled.div`

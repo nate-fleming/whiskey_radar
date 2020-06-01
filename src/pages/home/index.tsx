@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { compareAsc } from 'date-fns';
 import { posts } from '../../api/mocks/posts'
+
+import Loader from '../../components/loaders/radarLoader'
 
 
 import Post from '../../components/post'
 
 const Home: React.FC = () => {
   const sortedPosts = posts.sort((a,b) => Date.parse(b.date) - Date.parse(a.date))
-  return <Feed>
-    {sortedPosts.map(post => <Post key={post.id} post={post}/>)}
-  </Feed>;
+  const [isLoading, setLoading] = useState(true);
+  return (
+  <>
+  {
+    isLoading ? <Loader/> 
+    : 
+      <Feed>
+        {sortedPosts.map(post => <Post key={post.id} post={post}/>)}
+      </Feed>
+  }
+  </>
+  )
 };
 
 export default Home;

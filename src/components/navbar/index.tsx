@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Theme from "../../theme";
 import Menu from "./menu";
 
 const Navbar: React.FC = () => {

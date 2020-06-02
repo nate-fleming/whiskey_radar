@@ -27,7 +27,11 @@ interface IProps {
 
 const Menu: React.FC<IProps> = ({ isOpen }) => {
   return (
-    <Wrapper animate={isOpen ? "open" : "closed"} variants={variants}>
+    <Wrapper
+      initial="closed"
+      animate={isOpen ? "open" : "closed"}
+      variants={variants}
+    >
       <Card>
         <LinkWarpper variants={linkVariants}>
           <NavLink to="/">Home</NavLink>
@@ -36,7 +40,7 @@ const Menu: React.FC<IProps> = ({ isOpen }) => {
           <NavLink to="/add-cocktail">My Saved Bottles</NavLink>
         </LinkWarpper>
         <LinkWarpper variants={linkVariants}>
-          <NavLink to="/radar">Radar</NavLink>
+          <NavLink to="/radar">Map</NavLink>
         </LinkWarpper>
       </Card>
     </Wrapper>
@@ -48,11 +52,11 @@ export default Menu;
 const Wrapper = styled(motion.div)`
   position: absolute;
   left: 0;
-  z-index: 10000;
   background: ${(props) => props.theme.colors.primary};
   display: flex;
   flex-direction: column;
   border-bottom-right-radius: 8px;
+  margin-top: 60px;
 `;
 
 const LinkWarpper = styled(motion.div)`

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Theme from "../../theme";
 import Menu from "./menu";
 
 const Navbar: React.FC = () => {
@@ -20,6 +19,7 @@ const Navbar: React.FC = () => {
 };
 
 const Wrapper = styled.div`
+  position: fixed;
   width: 100%;
   height: 60px;
   background: ${(props) => props.theme.colors.primary};

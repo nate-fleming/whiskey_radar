@@ -14,34 +14,32 @@ import styled from "styled-components";
 //   repeatDelay: 1
 // }
 
-
 const RadarLoader: React.FC = () => {
   return (
     <Wrapper>
       <Circle
-          animate={{
-            scale: [1, 8, 16, 24, 32],
-          }}
-          transition={{
-            duration: 1,
-            ease: "easeInOut",
-            // times: [0, 0.2, 0.5, 0.8, 1],
-            loop: Infinity,
-            repeatDelay: 1
-          }}
-      >
-      </Circle>
-      <Icon 
-        className='fas fa-wine-bottle fa-4x'
         animate={{
-          rotate: 360
+          scale: [1, 8, 16, 24, 32],
+        }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+          // times: [0, 0.2, 0.5, 0.8, 1],
+          loop: Infinity,
+          repeatDelay: 1,
+        }}
+      ></Circle>
+      <Icon
+        className="fas fa-wine-bottle fa-4x"
+        animate={{
+          rotate: 360,
         }}
         transition={{
           duration: 1,
           ease: "easeInOut",
           loop: Infinity,
           delay: 1,
-          repeatDelay: 1
+          repeatDelay: 1,
         }}
       />
       {/* <Dot
@@ -79,14 +77,13 @@ const RadarLoader: React.FC = () => {
 
 export default RadarLoader;
 
-
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 60px);
+  height: 100vh;
   width: 100vw;
-  background: ${props => props.theme.colors.secondary};
+  background: ${(props) => props.theme.colors.secondary};
   overflow: hidden;
 `;
 
@@ -107,7 +104,7 @@ const Icon = styled(motion.div)`
 
 const Dot = styled(motion.div)`
   height: 8px;
-  width: 8px; 
+  width: 8px;
   background: white;
   border-radius: 50%;
   position: absolute;

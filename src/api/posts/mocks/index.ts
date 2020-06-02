@@ -9,7 +9,7 @@ export type Post = {
   price: number;
 };
 
-export const posts: Post[] = [
+export const mockPosts: Post[] = [
   {
     id: 1,
     username: "Jeff S",

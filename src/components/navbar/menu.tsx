@@ -52,11 +52,11 @@ export default Menu;
 const Wrapper = styled(motion.div)`
   position: absolute;
   left: 0;
-  z-index: 10000;
   background: ${(props) => props.theme.colors.primary};
   display: flex;
   flex-direction: column;
   border-bottom-right-radius: 8px;
+  margin-top: 60px;
 `;
 
 const LinkWarpper = styled(motion.div)`

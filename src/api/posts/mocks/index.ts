@@ -30,7 +30,7 @@ export const mockPosts: Post[] = [
     id: 3,
     username: "Justin",
     date: format(new Date(2020, 4, 4), "MMM d yyyy"),
-    location: "Liquer Locker",
+    location: "Liquor Locker",
     bottle: `Michter's Rye`,
     price: 42,
   },

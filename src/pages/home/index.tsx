@@ -42,10 +42,6 @@ const Home: React.FC = () => {
 
 export default Home;
 
-const Title = styled.div`
-  color: ${(props) => props.theme.colors.primary};
-`;
-
 const Feed = styled(motion.div)`
   padding-top: 60px;
   display: flex;

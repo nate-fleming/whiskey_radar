@@ -29,9 +29,9 @@ const UserPost: React.FC<IProps> = ({ post }) => {
       <Wrapper>
         <User>
           <Avatar className="fas fa-user-circle fa-4x" />
+          <Username>{post.username}</Username>
         </User>
         <InfoSection>
-          <Username>{post.username}</Username>
           <Section>
             <Icon className="fas fa-wine-bottle" />
             <PostItem>{post.bottle}</PostItem>
@@ -40,7 +40,7 @@ const UserPost: React.FC<IProps> = ({ post }) => {
             <Icon className="fas fa-map-marked-alt" />
             <PostItem>{post.location}</PostItem>
           </Section>
-          <Section>
+          <Section style={{ marginBottom: 0 }}>
             <Icon className="fas fa-calendar-alt" />
             <PostItem style={{ marginRight: 16 }}>{post.date}</PostItem>
             <Icon className="fas fa-money-bill" />
@@ -85,19 +85,18 @@ const User = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 12px;
+  margin-right: 20px;
 `;
 
 const Avatar = styled.div`
   color: white;
   margin-bottom: 4px;
-  margin-right: 20px;
 `;
 
 const Username = styled.div`
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  margin-bottom: 8px;
 `;
 
 const Section = styled.div`

@@ -4,6 +4,9 @@ import Menu from "./menu";
 
 const Navbar: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  const handleClose = () => setMenuIsOpen(false);
+
   return (
     <>
       <Wrapper>
@@ -13,7 +16,7 @@ const Navbar: React.FC = () => {
         />
         <Title>Whiskey Radar</Title>
       </Wrapper>
-      <Menu isOpen={menuIsOpen} />
+      <Menu closeMenu={handleClose} isOpen={menuIsOpen} />
     </>
   );
 };

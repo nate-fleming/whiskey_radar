@@ -1,15 +1,16 @@
 import React, { Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
-import Theme from "./theme";
 import Loading from "./components/loaders/radarLoader";
 import Home from "./pages/home";
+import MyBottles from './pages/my-bottles'
 
 
 function App() {
   return (
       <Suspense fallback={<Loading />}>
         <Switch>
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
+          <Route path="/my-bottles" component={MyBottles} />
         </Switch>
       </Suspense>
   );

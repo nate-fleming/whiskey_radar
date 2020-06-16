@@ -1,5 +1,5 @@
 import React from "react";
-import { Post } from "../api/posts/mocks";
+import { Post } from "../../api/posts/mocks";
 import { lighten } from "polished";
 import styled from "styled-components";
 import { formatDistance } from "date-fns";

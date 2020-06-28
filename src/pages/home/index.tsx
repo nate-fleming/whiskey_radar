@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { getPosts } from "../../api/posts";
 
 import Loader from "../../components/loaders/radarLoader";
-import PostSection from "../../components/post";
+import PostSection from "./post";
 import { Post } from "../../api/posts/mocks";
 import { motion } from "framer-motion";
 

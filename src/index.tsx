@@ -10,10 +10,10 @@ import Theme from "./theme";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-    <Theme>
-      <Navbar />
-      <App />
-    </Theme>
+      <Theme>
+        <Navbar />
+        <App />
+      </Theme>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

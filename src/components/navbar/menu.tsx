@@ -23,10 +23,10 @@ const linkVariants = {
 
 interface IProps {
   isOpen: boolean;
-  closeMenu: any
+  closeMenu: any;
 }
 
-const Menu: React.FC<IProps> = ({ isOpen , closeMenu }) => {
+const Menu: React.FC<IProps> = ({ isOpen, closeMenu }) => {
   return (
     <Wrapper
       initial="closed"
@@ -35,13 +35,19 @@ const Menu: React.FC<IProps> = ({ isOpen , closeMenu }) => {
     >
       <Card>
         <LinkWarpper variants={linkVariants}>
-          <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+          <NavLink to="/" onClick={closeMenu}>
+            Home
+          </NavLink>
         </LinkWarpper>
         <LinkWarpper variants={linkVariants}>
-          <NavLink to="/my-bottles" onClick={closeMenu}>My Saved Bottles</NavLink>
+          <NavLink to="/my-bottles" onClick={closeMenu}>
+            My Saved Bottles
+          </NavLink>
         </LinkWarpper>
         <LinkWarpper variants={linkVariants}>
-          <NavLink to="/radar" onClick={closeMenu}>Map</NavLink>
+          <NavLink to="/radar" onClick={closeMenu}>
+            Map
+          </NavLink>
         </LinkWarpper>
       </Card>
     </Wrapper>
@@ -58,6 +64,7 @@ const Wrapper = styled(motion.div)`
   flex-direction: column;
   border-bottom-right-radius: 8px;
   margin-top: 60px;
+  z-index: 1000;
 `;
 
 const LinkWarpper = styled(motion.div)`
